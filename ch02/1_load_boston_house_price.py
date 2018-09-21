@@ -9,3 +9,9 @@ df_data.columns = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RA
                    'MEDV']
 
 print(df_data.head())
+print(df_data.values)  # 값을 numpy array 형태로 표현
+
+df_data['weight_0'] = 1  # weight 0 값 추가
+df_data = df_data.drop("MEDV", axis=1)  # drop : pandas 라이브버리 내 함수, 데이터 떨궈냄, 값 제거
+print(df_data.head())
+print(df_data.as_matrix())  # matrix data 로 변환하기
